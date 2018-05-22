@@ -1,0 +1,19 @@
+response.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-price-information", " " ))]/text() | //*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-price", " " ))]/text() | //*[contains(concat( " ", @class, " " ), concat( " ", "t9", " " ))]/text() | //*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-volume-unit", " " ))]/text() | //*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-name", " " ))]//span/text() | //*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-volume", " " ))]//span/text()').extract()
+
+
+
+
+
+
+//*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-name", " " ))]//span
+
+
+
+Spider:
+
+1) Übersichtsseite fetchen
+2) Namen der Tarife rausfinden
+    response.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "tariff-catalog-carousel__tariff-name", " " ))]//span/text()').extract()
+3) Mit diesen Namen URLs für Tarifdetails bilden
+4) Die in 3) gebildeten URLS fetchen und Daten extrahieren
+5) Ausgabe
